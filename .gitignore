@@ -1,0 +1,94 @@
+#####
+# Global
+#####
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+
+#####
+# CSS
+#####
+.sass-cache
+
+#####
+# Ender Modules
+#####
+
+source/s/node_modules/*
+
+
+#####
+# Python project anfema
+#####
+
+anfema_website_backend
+anfema_website_backend.sqlite3
+
+
+#####
+# Python
+#####
+
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+__pycache__
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Django
+
+*.log
+*.pot
+*.pyc
+local_settings.py
+
+
+#####
+# PyCharm
+# http://www.jetbrains.com/pycharm/webhelp/project.html
+#####
+
+.idea/workspace.xml
+.iml
+workspace.xml
+.idea/dictionaries/*
+
+node_modules
+/.idea/

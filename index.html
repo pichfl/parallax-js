@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Plax Test</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+
+		#stage {
+			position: relative;
+			width: 320px;
+			height: 320px;
+			margin: 0 auto;
+			background: #808080;
+			overflow: hidden;
+		}
+
+		#back, #icons, .icon, .bubble {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		#back {
+			width: 420px;
+			height: 420px;
+			top: -50px;
+			left: -50px;
+			background: url(MilkyWay.jpg) 50% 50%;
+			background-size: 100%;
+		}
+
+		.bubble {
+			top: -13px;
+			left: 47px;
+			z-index: 10;
+			width: 26px;
+			height: 26px;
+			border-radius: 15px;
+			background: red;
+			color: #fff;
+			font: 100 18px/26px 'Helvetica Neue', Helvetica, sans-serif;
+			text-align: center;
+		}
+
+		#icons {
+			top: 80px;
+			left: 80px;
+			width: 160px;
+			height: 160px;
+		}
+
+		.icon {
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 60px;
+			height: 60px;
+			border-radius: 12px;
+			background: -webkit-linear-gradient(#0080ff, #0ff);
+			background: linear-gradient(#0080ff, #0ff);
+		}
+
+		.icon + .icon {
+			top: 0;
+			left: 100px;
+		}
+
+		.icon + .icon + .icon {
+			top: 100px;
+			left: 0;
+		}
+
+		.icon + .icon + .icon + .icon {
+			top: 100px;
+			left: 100px;
+		}
+	</style>
+	<script src="ender.js"></script>
+	<script src="pllx.js"></script>
+</head>
+<body>
+<section id="stage">
+	<div id="icons">
+		<div class="icon">
+			<div class="bubble">2</div>
+		</div>
+		<div class="icon"></div>
+		<div class="icon"></div>
+		<div class="icon"><div class="bubble">2</div></div>
+	</div>
+	<div id="back"></div>
+</section>
+<script>
+	var p = $.pllx(['.bubble', '#icons', $('#back')], [20,10,-100], {
+		target: $('#stage')
+	});
+	console.log(p);
+</script>
+</body>
+</html>
