@@ -1,14 +1,14 @@
 !function (context, $) {
 
 	/**
-	 * Creates a new Pllx instance
+	 * Creates a new Parallax instance
 	 *
 	 * @param elements an array of selectors or ender objects
 	 * @param depths an array of the corresponding depths
 	 * @param options additional options for setup
 	 * @constructor
 	 */
-	function Pllx(elements, depths, options) {
+	function Parallax(elements, depths, options) {
 		this.options = {
 			context: $(context) // defaults to endered window
 			, target: undefined // will default to the context
@@ -48,9 +48,9 @@
 	}
 
 
-	// Pllx methods
+	// Parallax methods
 
-	Pllx.prototype.setup = function (elements, depths) {
+	Parallax.prototype.setup = function (elements, depths) {
 		var layers = []
 			, i
 			, targetOffset = (this.options.target[0] !== window) ? this.options.target.offset() : {
@@ -104,7 +104,7 @@
 	var motionX = null
 		, motionY = null;
 
-	Pllx.prototype.render = function (event) {
+	Parallax.prototype.render = function (event) {
 		var x = 0
 			, y = 0
 			, ratioHorizontal = 0
@@ -181,15 +181,15 @@
 		}
 	}
 
-	Pllx.prototype.attach = function (target) {
+	Parallax.prototype.attach = function (target) {
 		var t = target || this.options.target;
 
-		t.on('mousemove.pllx', function (event) {
+		t.on('mousemove.Parallax', function (event) {
 			this.render(event);
 		}.bind(this));
 
 		if (moveable()) {
-			this.options.context.on('deviceorientation.pllx', function (event) {
+			this.options.context.on('deviceorientation.Parallax', function (event) {
 				this.render(event.originalEvent);
 			}.bind(this));
 		}
@@ -198,8 +198,8 @@
 
 	$.ender({
 
-		pllx: function (elements, depths, options) {
-			return new Pllx(elements, depths, options);
+		parallax: function (elements, depths, options) {
+			return new Parallax(elements, depths, options);
 		}
 
 	});

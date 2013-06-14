@@ -81,8 +81,8 @@
 			left: 100px;
 		}
 	</style>
-	<script src="ender.js"></script>
-	<script src="pllx.js"></script>
+	<script src="ender.min.js"></script><!-- Ender.js with jeesh -->
+	<script src="../parallax.js"></script>
 </head>
 <body>
 <section id="stage">
@@ -97,7 +97,7 @@
 	<div id="back"></div>
 </section>
 <script>
-	var p = $.pllx(['.bubble', '#icons', $('#back')], [20,10,-100], {
+	var p = $.parallax(['.bubble', '#icons', $('#back')], [20,10,-100], {
 		target: $('#stage')
 	});
 	console.log(p);
