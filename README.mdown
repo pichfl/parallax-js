@@ -1,0 +1,22 @@
+# Parallax.js
+
+A parallax effect loosely based on [Plax](https://github.com/cameronmcefee/plax)
+created for [Ender.js](http://ender.jit.su).
+
+Works on desktop (with mousemove) and mobile (devicemotion) and can be used to replicate things like the iOS 7 user homescreen.
+
+Created by [@pichfl](http://florianpichler.de) in 2013
+
+## Version History
+
+- v0.1 Initial release, everything is still beta
+
+
+## Todo
+
+I really want to support css transforms and maybe requestAnimationFrame to speed up the rendering process where possible.
+
+
+## License
+
+This will probably be released under a MIT like licence.
