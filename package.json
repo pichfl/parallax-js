@@ -1,0 +1,23 @@
+{
+  "name": "pichfl-parallax",
+  "version": "0.1.0",
+  "description": "A parallax effect loosely based on Plax created for Ender.js.",
+  "main": "parallax.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pichfl/parallax-js.git"
+  },
+  "keywords": [
+    "ender",
+    "parallax",
+    "dom"
+  ],
+  "author": "Florian Pichler <@pichfl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pichfl/parallax-js/issues"
+  }
+}
